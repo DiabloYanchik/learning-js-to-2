@@ -149,7 +149,13 @@ export default function TaskPage() {
           )}
         </div>
       </div>
-        <AstronautGuide variant={results?.passed ? "success" : "task"} />
+        <AstronautGuide
+            variant={
+                results
+                    ? (results.passed ? "success" : "fail")
+                    : "task"
+            }
+        />
     </>
   );
 }

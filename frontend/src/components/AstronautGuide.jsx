@@ -35,7 +35,9 @@ export default function AstronautGuide({ variant = "default", levelId = null }) 
             setMessage(messages.taskStart);
         } else if (variant === "success") {
             setMessage(messages.taskSuccess);
-        } else if (variant === "planet" || variant === "default") {
+        }else if (variant === "fail") {
+            setMessage(messages.taskFail);}
+        else if (variant === "planet" || variant === "default") {
             setMessage(messages.planet);
         }
     }, [variant]);
